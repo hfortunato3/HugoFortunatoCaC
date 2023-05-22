@@ -1,0 +1,97 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.contenidoClima {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    max-width: 301px;
+    text-align: center;
+    padding: 20px 20px 50px;
+    margin: 10% auto 0;
+    background-color: rgb(0,130,0,0.7);
+    border-radius: 9px;
+    height: 230px;
+    position: fixed;
+    bottom: 10%;
+}
+
+/* .weather-content h1{
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #FFF;
+} */
+.contenidoClima p {
+    color: #cfcfd9;
+}
+
+.result {
+    margin-bottom: 8%;
+}
+
+.result p {
+    margin: 5px 0 5px;
+}
+
+.result h2 {
+    font-size: 30px;
+    line-height: 30px;
+    margin: -10px 0 10px;
+    color: #fff;
+}
+
+.result h5 {
+    font-size: 21px;
+    margin: 2px;
+    color: #fff;
+}
+
+.alert-message {
+    margin: 24px 0 0;
+    color: red !important;
+}
+
+/*********** Tamaño para PANTALLAS PEQUEÑAS / CELULARES ***********/
+@media only screen and (max-width:767px) {
+    .contenidoClima {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        max-width: 301px;
+
+        text-align: center;
+        padding: 5px 5px 10px;
+        margin: 10% auto 0;
+    
+        background-color: rgb(0,130,0,0.7);
+    
+        border-radius: 9px;
+        width: 200px;
+        height: 180px;
+        position: fixed;
+        bottom: 10%;
+    }
+
+    .contenidoClima p {
+        color: #cfcfd9;
+    }
+    
+    .result {
+        margin-bottom: 8%;
+    }
+    
+    .result p {
+        margin: 3px 0 3px;
+    }
+    
+    .result h2 {
+        font-size: 20px;
+        line-height: 10px;
+        margin: 1px 0 10px;
+        color: #fff;
+    }
+    
+    .result h5 {
+        font-size: 16px;
+        margin: 2px;
+        color: #fff;
+    }
+
+}

@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+#tarjetasDeportes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* min-height: 100vh; */
+    /* background: rgb(92, 92, 92); */
+    background-color: rgb(0, 130, 0);
+
+    margin-top: 0px;
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px;
+}
+
+.card .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.card .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+
+}
+
+.card .front img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background: rgba(0, 0, 0, .4);
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.card .back {
+    transform: perspective(600px) rotateY(180deg);
+    background: rgb(3, 35, 54);
+    padding: 15px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000;
+    align-items: center;
+
+
+}
+
+
+
+.card .back h3 {
+    font-size: 30px;
+    margin-top: 20px;
+    letter-spacing: 4px;
+    color: rgb(255, 255, 255);
+}
+
+.card .back p {
+    letter-spacing: 1px;
+}
+
+.card:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.card:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+.botonDetalles {
+    /* .card .back .botonDetalles */
+    padding: 10px 30px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 50%;
+    background-color: rgb(0, 130, 0);
+    border-radius: 10px;
+    margin-top: 5px;
+    color: white;
+}
+
+.botonDetalles:hover {
+    background-color: rgb(0, 0, 130);
+    color: white;
+    font-size: 14;
+    font-weight: bold;
+}
+
+/* TEXTO DETALLES */
+#textoCentral {
+    /*#textoDeportes {*/
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    padding: 20px 25px;
+    padding-top: 80px;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    /* height: max-content; */
+    height: 110vh;
+    /* width: 60vw; */
+    /* justify-content: space-around; */
+    justify-content: center;
+    /*space-between;*/
+    /* space-evenly
+flex-start
+flex-end
+center
+space-around
+space-between */
+    text-align: center;
+    align-items: center;
+    background-color: rgb(180, 180, 180);
+    /* background-color: rgb(193, 230, 138); */
+    /* border-radius: 20px; */
+    border-color: black;
+    /* background-image: url(../imagenes/atletismoM.jpg);
+    opacity: 0.5; */
+}
+
+.celda {
+    border-style: groove;
+    border-width: 3px;
+    border-radius: 5px;
+ 
+}
+
+#celdaDetalles {
+    padding-top: 20px;
+}
+
+#contenidoDeporte {
+    padding: 15px;
+    text-align: left;
+    /* margin: 20px; */
+}
+
+#celdaFoto {
+    padding: 10px;
+}
+
+.ancho-img {
+    width: 60px;
+}
+
+#ladoIzquierdoTexto {
+    background-color: rgb(0, 0, 130);
+    /* border-radius: 20px; */
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#ladoDerechoTexto {
+    background-color: rgb(0, 130, 0);
+    /* border-radius: 20px; */
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+#ladoDerechoTexto #btnVolver {
+    width: 120px;
+    position: fixed;
+    bottom: 70px;
+    background-color: rgb(0, 0, 130);
+}
+
+#ladoDerechoTexto #btnVolver:hover {
+    background-color: rgb(0, 130, 0);
+}
+
+/* table {
+    
+    border: groove;
+    border-radius: 4px;
+}
+
+tr,
+td {
+    border: groove;
+    border-radius: 4px;
+
+}
+
+th {
+    border: groove;
+    border-radius: 4px;
+} */
+
+
+
+
+/*********** Tamaño para pantalla PEQUEÑAS  ***********/
+@media only screen and (max-width:850px) {
+    #textoDeportes {
+        display: grid;
+        background-color: rgb(180, 180, 180);
+        /* grid-template-columns: 100%; */
+        /* background-color: aqua; */
+        /* height: 200vh; */
+        /* VER TEMA BLOQUE CENTRAL DEL TEXTO*/
+        height: 1130px;
+    }
+
+    #textoCentral {
+        /* background-color: aqua; */
+        background-color: rgb(180, 180, 180);
+    }
+
+    #ladoIzquierdoTexto {
+        display: none;
+    }
+
+    #ladoDerechoTexto {
+        display: flex;
+        height: 0;
+
+    }
+
+    #ladoDerechoTexto img {
+        display: none;
+    }
+
+    .laterales>img {
+        height: 80px;
+        width: 80px;
+
+    }
+
+    #celdaTitulo,
+    #celdaHorarios,
+    #celdaDetalles,
+    #celdaFoto {
+        width: 100%;
+        background-color: rgb(180, 180, 180);
+    }
+
+    #celdaTitulo,
+    #celdaHorarios {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        height: 120px;
+    }
+
+    #celdaFoto img {
+        width: 100%;
+        /* height: 20%; */
+    }
+
+}
+
+/*********** Tamaño MEDIANOS ***********/
+/* @media only screen and (min-width:768px) {
+    #textoDeportes {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    #ladoIzquierdoTexto {
+        display:none;
+    }
+
+    #ladoDerechoTexto {
+        background-color: rgb(0, 130, 0);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    } */
+
+/* #ladoIzquierdoTexto>img {
+        height: 130px;
+        width: 130px;
+        position:fixed;
+        top: 40%;
+    } */
+
+/* #ladoDerechoTexto>img {
+        height: 130px;
+        width: 130px;
+        position:fixed;
+        top: 40%;
+    } 
+}*/
+/*********** Tamaño MEDIANO GRANDES ***********/
+@media only screen and (min-width:850PX) {
+    #textoDeportes {
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+        height: 110vh;
+    }
+
+    #ladoIzquierdoTexto,
+    #ladoDerechoTexto {
+        display: flex;
+        /**/
+        /* height: 100vh; */
+        width: 100%;
+    }
+
+    #ladoIzquierdoTexto>img {
+        /* height: 180px;
+        width: 180px; */
+        height: 150px;
+        width: 150px;
+        position: fixed;
+        top: 40%;
+    }
+
+    #ladoDerechoTexto>img {
+        /* height: 180px;
+        width: 180px; */
+        height: 150px;
+        width: 150px;
+        position: fixed;
+        top: 40%;
+    }
+
+    #celdaTitulo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 120px;
+
+
+    }
+
+    #celdaHorarios {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 59%;
+        height: 120px;
+    }
+
+    #celdaDetalles {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        width: 59%;
+        height: 79%;
+
+        overflow: auto;
+    }
+
+    #celdaFoto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        height: 79%;
+
+        /* position: absolute; */
+        /* width: 100%;
+        height: 100%; */
+
+
+    }
+
+    #celdaFoto #imagenDeporte img {
+        display: flex;
+        /* max-height: 350px; */
+        /* height: 200px; */
+
+        /* max-height: 450px;
+        max-width: 350px; */
+        /* width: 70%;  */
+        justify-content: center;
+        align-items: center;
+
+        /* text-align: center; */
+        /* backface-visibility: hidden;
+        overflow: hidden;
+        object-fit: cover; */
+
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        border-radius: 5px;
+    }
+
+}

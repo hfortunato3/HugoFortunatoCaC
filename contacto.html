@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/contacto.css">
+    <link rel="stylesheet" href="./css/barranavegacion.css" type="text/css" media="screen" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+    <link rel="shortcut icon" href="./imagenes/CPAIcon.png">
+    <title>Contactos</title>
+</head>
+
+<body>
+    <!--Encabezado de página-->
+    <header>
+        <script src="./scripts/menu.js"></script>
+    </header>
+    <!-- Seccion central de la página-->
+    <div id="contenedorCentral">
+        <div class="laterales" id="ladoIzquierdoTexto"><img src="./imagenes/CPAverde.png" alt=""></div>
+
+        <div id="sectorCentral">
+
+            <!-- <form class="formulario" action="mostrarDatos.html" targer="_blank"> -->
+               
+            <form class="formulario" onsubmit="return validarFormulario()">
+                <!-- onsubmit="return validarFormulario()" -->
+                <h4>
+                    <span class="material-symbols-outlined">mail</span>
+                         FORMULARIO DE CONTACTO     
+                         <span class="material-symbols-outlined">mail</span>
+                </h4>
+                <table class="tabla">
+
+                    <tr>
+                        <th width="20%"> <!-- class="col1" -->
+                            <label for="apellido">Apellido:</label>
+                        </th>
+                        <td width="75%"> <!--class="col2" -->
+                            <input type="text" id="apellido" name="apellido" placeholder="Ingrese su Apellido..." value=""> 
+                        </td>
+                        <td width="5%">
+                            <!-- <span class="material-symbols-rounded" id="tildeApellido">check_circle</span> -->
+                            <span class="material-symbols-rounded" id="errorApellido">emergency</span>
+                            <!-- <span class="material-symbols-outlined">emergency</span> -->
+                           
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <th width="20%">
+                            <label for="nombre">Nombre:</label>
+                            </td>
+                        <td width="75%">
+                            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su Nombre..." value="">
+                        </td>
+                        <td width="5%">
+                            <span class="material-symbols-rounded" id="errorNombre">emergency</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="20%">
+                            <label for="email">Correo Electrónico:</label>
+                        </th>
+                        <td width="75%">
+                            <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico..." value="">
+
+                        </td>
+                        <td width="5%">
+                            <span class="material-symbols-rounded" id="errorEmail">emergency</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="20%">
+                            <label for="fechaNacimiento">Fecha Nacimiento:</label>
+                        </th>
+                        <td width="75%">
+                            <input type="date" id="fechaNacimiento" name="fechaNacimiento" value="">
+                        </td>
+                        <td width="5%">
+                            <span class="material-symbols-rounded" id="errorFechaNacimiento">emergency</span>
+                        </td>
+                    </tr>
+                </table>
+                <table class="tabla">
+                    <tr>
+
+                        <th width="20%">
+                            Género:
+                        </th>
+
+                        <td width="40%" class="rodearOpcion">
+                            <input type="radio" id="generoHombre" name="sexo" value="Hombre" checked>Hombre
+                        </td>
+                        <td width="40%" class="rodearOpcion">
+                            <input type="radio" id="generoMujer" name="sexo" value="Mujer">Mujer
+                        </td>
+
+                    </tr>
+                </table>
+                <table class="tabla">
+                    <tr>
+                        <th width="20%" rowspan="2">
+                            ¿Cómo nos conoce?:
+                        </th>
+                        <td width="27%" class="rodearOpcion">
+                            <input type="checkbox" id="socio" name="conocimiento" value="socio">Soy socio   <!--checked-->
+                        </td>
+                        <td width="27%" class="rodearOpcion">
+                            <input type="checkbox" id="vecino" name="conocimiento" value="vecino">Soy vecino
+                        </td>
+                        <td width="27%" class="rodearOpcion">
+                            <input type="checkbox" id="internet" name="conocimiento" value="internet">Internet
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="27%" class="rodearOpcion">
+                            <input type="checkbox" id="publicidad" name="conocimiento" value="publicidad">Publicidad
+
+                        </td>
+                        <td width="27%" class="rodearOpcion"> 
+                            <input type="checkbox" id="amigos" name="conocimiento"  value="amigos">Referencias de amigos
+                        </td>
+                        <td width="27%" class="rodearOpcion"> 
+                            <input type="checkbox"id="otros" name="conocimiento" value="otros">Otros
+                        </td>
+                        <td width="5%">
+                            <span class="material-symbols-rounded" id="errorConocimiento">emergency</span>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="tabla">
+
+                    <tr>
+                        <th width="20%"> <!-- class="col1"  -->
+                            <label for="consulta">Consulta:</label>
+                        </th>
+                        <td width="75%"> <!-- class="col2" -->
+                            <textarea id="consulta" name="consulta" rows="4" cols="50"
+                                placeholder="Ingrese aquí su consulta..."></textarea>
+                        </td>
+                        <td width="5%">
+                            <!-- <span class="material-symbols-rounded" id="tildeApellido">check_circle</span> -->
+                            <span class="material-symbols-rounded" id="errorConsulta">emergency</span>
+                        </td>
+
+                    </tr>
+                </table>
+                <input type="submit" value="Enviar">
+            </form>
+
+        </div>
+        <div class="laterales" id="ladoDerechoTexto"><img src="./imagenes/CPA.png" alt=""></div>
+
+
+    </div>
+    <!--Pie de página-->
+    <footer>
+        <script src="./scripts/pie.js"></script>
+    </footer>
+    <script src="https://kit.fontawesome.com/9afbaf2f11.js" crossorigin="anonymous"></script>
+    <script src="./scripts/contacto.js"></script>
+    <script src='./scripts/menuHamburguesa.js'></script>
+</body>
+
+</html>

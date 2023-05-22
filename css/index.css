@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+#tarjetasDeportes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* background: rgb(92, 92, 92); */
+    background-color: rgb(0, 130, 0);
+
+    margin-top: 45px;
+}
+
+
+
+/* TEXTO DETALLES */
+#textoCentral {
+    /*#textoDeportes {*/
+    display: flex;
+    flex-direction: column;
+    padding: 25px 35px;
+    height: 100vh;
+    /* width: 60vw; */
+    justify-content: space-around;
+    /*space-between;*/
+    /* space-evenly
+flex-start
+flex-end
+center
+space-around
+space-between */
+    text-align: center;
+    align-items: center;
+    background-color: rgb(180, 179, 179);
+    /*rgb(193, 230, 138);*/
+    /* border-radius: 20px; */
+    border-color: black;
+    background-image: url(../imagenes/frenteCPA.png);
+    background-size: cover;
+
+    /*opacity: 0.5; */
+}
+
+#textoCentral #escudoCentral {
+    height: 60%;
+    max-width: 90%;
+    position: absolute;
+    top: 150px;
+}
+
+/* .ancho-img {
+    width: 60px;
+} */
+
+#ladoIzquierdoTexto {
+    background-color: rgb(0, 0, 130);
+    /* border-radius: 20px; */
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+}
+
+#ladoDerechoTexto {
+    background-color: rgb(0, 130, 0);
+    /* border-radius: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*********** Tamaño para PANTALLAS PEQUEÑAS / CELULARES ***********/
+@media only screen and (max-width:767px) {
+    #textoDeportes {
+        display: grid;
+
+        grid-template-columns: 100%;
+        height: auto;
+        /* VER TEMA BLOQUE CENTRAL DEL TEXTO*/
+
+
+    }
+
+    #textoDeportes h1 {
+        font-size: larger;
+        color: white;
+        position: absolute;
+
+        width: 70%;
+        top: 80px;
+
+    }
+
+    /*Estrellas colocadas junto al nombre del club */
+    #textoDeportes .material-symbols-outlined {
+        font-size: larger;
+        color: white;
+    }
+
+    #ladoIzquierdoTexto {
+        display: none;
+    }
+
+    #ladoDerechoTexto {
+        display: block;
+        height: 0px;
+    }
+
+    .laterales>img {
+        display: none;
+        height: 80px;
+        width: 80px;
+
+    }
+
+}
+
+/*********** Tamaño MEDIANO ***********/
+@media only screen and (min-width:768px) {
+    #textoDeportes {
+        display: grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    #textoDeportes h1 {
+        font-size: x-large;
+        color: white;
+        position: absolute;
+
+        width: 50%;
+        top: 80px;
+
+    }
+
+    #textoDeportes .material-symbols-outlined {
+        font-size: x-large;
+        color: white;
+    }
+
+    #ladoIzquierdoTexto {
+        display: none;
+        height: 100vh;
+    }
+
+    #ladoDerechoTexto {
+        /* display: none;   Se oculta el lateral derecho "verde" en pantallas medianas. */
+        /* height: 100px;
+        width: 98vw; */
+        height: 100vh;
+    }
+
+    #ladoIzquierdoTexto>img {
+        height: 130px;
+        width: 130px;
+    }
+
+    #ladoDerechoTexto>img {
+        height: 180px;
+        width: 180px;
+    }
+}
+
+/*********** Tamaño COMPUTADORA ESCRITORIO ***********/
+@media only screen and (min-width:992px) {
+    #textoDeportes {
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+    }
+
+    #textoDeportes h1 {
+        font-size: xx-large;
+        color: white;
+        position: absolute;
+        width: 50%;
+        top: 80px;
+    }
+
+    /* Estrella */
+    #textoDeportes .material-symbols-outlined {
+        font-size: xx-large;
+        color: white;
+    }
+
+    #ladoIzquierdoTexto,
+    #ladoDerechoTexto {
+        display: flex;
+        height: 100vh;
+        width: 100%;
+    }
+
+    #ladoIzquierdoTexto>img {
+        height: 180px;
+        width: 180px;
+    }
+
+    #ladoDerechoTexto>img {
+        height: 180px;
+        width: 180px;
+
+    }
+
+}
+
+
+
+
+/*  ESCUDO  */
+.escudo {
+    position: fixed;
+    /* width: 300px;
+    height: 350px; */
+    width: 80%;
+    height: 80%;
+    /* margin: 20px; */
+}
+
+.escudo .face {
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    backface-visibility: hidden;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    transition: .5s;
+}
+
+/* .escudo .front {
+    transform: perspective(600px) rotateY(0deg);
+    box-shadow: 0 5px 10px #000;
+
+} */
+
+.escudo .front img {
+    position: absolute;
+    /* width: 100%;
+    height: 100%; */
+    /* object-fit: cover; */
+}
+
+
+
+.escudo .back {
+    transform: perspective(600px) rotateY(180deg);
+
+    padding: 15px;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px #000; */
+    /* align-items: center; */
+    backface-visibility: hidden;
+
+}
+
+.escudo:hover .front {
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.escudo:hover .back {
+    transform: perspective(600px) rotateY(360deg);
+}
+
+#elementoConsulta {
+    float: right;
+}
+
+h1 {
+    background-color: rgb(0, 130, 0, .5);
+    border-radius: 20px;
+    text-shadow: 2px 2px 3px black;
+
+    /* font-size: 36px;
+    font-weight: 900;
+
+
+    width: 100%; */
+}
+
+/* #textoDeportes h1 {
+    font-size: xx-large;
+    color: white;
+    position: absolute;
+    width: 50%;
+    top: 80px;
+} */
+
+.contenedorMenu {
+    font-variant: small-caps;
+
+
+}

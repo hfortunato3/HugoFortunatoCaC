@@ -1,0 +1,426 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+
+label,
+input {
+    font-size: 18px;
+    /*15*/
+    /*1.0vw;*/
+}
+
+
+
+input[type=text],
+input[type=date],
+input[type=email],
+/* input[type=textArea], */
+select {
+    width: 95%;
+    /*80 se ve bien en celulares 100 en desktop*/
+    padding: 1vw;
+    margin: 1vw;
+    display: inline-block;
+    border: 1vw;
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 3px black;
+
+}
+
+/* input[type=textArea]{ */
+textarea {
+    /* height: 200px; */
+    min-height: 100px;
+    resize: vertical;
+    width: 95%;
+    padding: 1px;
+    margin: 1px;
+    border: 1px;
+    border-radius: 5px;
+    font-size: 18px;
+    box-shadow: 2px 2px 3px black;
+}
+
+textarea:hover {
+    border: 4vw;
+    border-color: black;
+    background-color: #e2e9af;
+}
+
+input[type=text]:hover,
+input[type=date]:hover,
+
+input[type=email]:hover,
+input[type=checkbox]:hover {
+    border: 4vw;
+    border-color: black;
+    background-color: #e2e9af;
+
+
+
+}
+
+input[type=submit] {
+    width: 80%;
+    background-color: rgb(0, 130, 0);
+    /* #4caf50;*/
+    color: black;
+    font-weight: bold;
+    padding: 14px 20px;
+    margin: 8px 6px;
+    /* border: none; */
+    border-radius: 15px;
+    border-color: black;
+    cursor: pointer;
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+
+input[type=submit]:hover {
+    background-color: rgb(0, 0, 130);
+    /* darkgreen;*/
+    color: white;
+    font-size: 14;
+    font-weight: bold;
+    font-stretch: extra-expanded;
+}
+
+#contenedorCentral {
+    /* height: 100vh; */
+    border-radius: 20px;
+    padding-top: 60px;
+    /* margin-top:50px; */
+    width: 99vw;
+}
+
+.formulario {
+    /* border-radius: 20px; */
+    border-color: black;
+    /* background-color: #a2e869; */
+    color: white;
+    /* font-weight: bold; */
+    font-size: 18px;
+    font-stretch: expanded;
+    background: rgb(132, 131, 131);
+    /* background-color: rgb(180, 180, 180); */
+    /* padding: 2px; */
+    /*margin: 1% 5%; */
+    align-self: center;
+    /* height: 100vh; */
+
+
+    padding-top: 50px;
+    padding-bottom: 60px;
+
+
+}
+
+
+
+table {
+    border-color: black;
+    width: 100%;
+    /* height: 300px; */
+
+    /* background-color: black; */
+
+}
+
+
+/* form .material-symbols-outlined {
+    font-size: 36px;
+    color: yellow;
+ } */
+
+/* .col1 {
+    width: 20%;
+}
+
+.col2 {
+    width: 80%;
+} */
+
+
+/* .ubicacion-contenedor{ */
+/* #sectorCentral {
+    display: grid;
+
+} */
+
+
+/* TEXTO DETALLES */
+#sectorCentral {
+    /*#contenedorCentral {*/
+    display: flex;
+    flex-direction: column;
+    padding: 25px 35px;
+    /* height: 100vh; */
+    /* width: 60vw; */
+    justify-content: space-around;
+    /*space-between;*/
+    /* space-evenly
+    flex-start
+    flex-end
+    center
+    space-around
+    space-between */
+    text-align: center;
+    align-items: center;
+    /* background-color: rgb(180, 180, 180); */
+    background: rgb(132, 131, 131);
+    /*rgb(193, 230, 138);*/
+    /* border-radius: 20px; */
+    border-color: black;
+    /* background-image: url(../imagenes/atletismoM.jpg);
+    opacity: 0.5; */
+
+
+}
+
+
+/*SIRVE LO QUE ESTA EN .OPCIONESTABLA??*/
+.opcionesTabla {
+    display: flex;
+
+    flex-flow: row wrap;
+
+    align-content: space-evenly;
+    gap: 0px;
+    border-style: solid;
+    border-color: rgb(200, 200, 200);
+    border-width: 1px;
+    border-radius: 5px;
+
+    padding-left: 10px;
+    margin: 1px;
+    /* align-items:center; */
+
+}
+
+.rodearOpcion {
+    border-style: solid;
+    border-color: rgb(200, 200, 200);
+    border-width: 1px;
+    border-radius: 5px;
+    background-color: rgb(143, 142, 142);
+    text-align: left;
+    padding: 2px 10px;
+
+    box-shadow: 2px 2px 3px black;
+    ;
+}
+
+.tabla {
+    width: 95%;
+    /* padding-left: 20px; */
+    padding: 10px;
+
+}
+
+.ancho-img {
+    width: 60px;
+}
+
+#ladoIzquierdoTexto {
+    background-color: rgb(0, 0, 130);
+    border-radius: 0px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    /* height: 100%; */
+}
+
+#ladoDerechoTexto {
+    background-color: rgb(0, 130, 0);
+    /* border-radius: 20px; */
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+form h4 {
+    color: white;
+
+
+    text-shadow: 2px 2px 3px black;
+}
+
+th,
+th label {
+    text-shadow: 2px 2px 3px black;
+}
+
+/*********** Tamaño para PEQUEÑOS CELULARES ***********/
+@media only screen and (max-width:767px) {
+    #contenedorCentral {
+        display: grid;
+        grid-column: 1;
+        grid-row: 3;
+        grid-gap: 1px;
+        grid-template-columns: 100%;
+        /* height: auto; */
+        /* VER TEMA BLOQUE CENTRAL DEL TEXTO*/
+
+    }
+
+    th,
+    th label {
+        font-size: 14px;
+    }
+
+    #ladoIzquierdoTexto {
+        display: flex;
+        height: 100px;
+        align-items: center;
+        margin-top: 0px;
+        background-color: rgb(0, 130, 0);
+    }
+
+    #ladoDerechoTexto {
+        display: none;
+
+    }
+
+    .laterales>img {
+        height: 80px;
+        width: 80px;
+
+    }
+
+    form h4 {
+        font-size: 24px;
+        text-align: center;
+
+    }
+}
+
+/*********** Tamaño MEDIANOS ***********/
+@media only screen and (min-width:768px) {
+    #contenedorCentral {
+        display: grid;
+        grid-template-columns: 30% 70%;
+    }
+
+    /* #ladoIzquierdoTexto {
+        height: 110vh;
+    } */
+
+    #ladoDerechoTexto {
+        display: none;
+        /* Se oculta el lateral derecho "rojo" en pantallas medianas. */
+        /* height: 100px;
+        width: 98vw; */
+    }
+
+    #ladoIzquierdoTexto>img {
+        height: 130px;
+        width: 130px;
+        position: fixed;
+        top: 40%;
+    }
+
+    /* #ladoDerechoTexto>img {
+        height: 180px;
+        width: 180px;
+        position:fixed;
+        top: 40%;
+    } */
+
+    form h4 {
+        font-size: 28px;
+        text-align: center;
+
+    }
+}
+
+/*********** Tamaño COMPUTADORA ESCRITORIO ***********/
+@media only screen and (min-width:992px) {
+    #contenedorCentral {
+        display: grid;
+        grid-template-columns: 20% 60% 20%;
+    }
+
+    #ladoIzquierdoTexto,
+    #ladoDerechoTexto {
+        display: flex;
+        /* height: 110vh; */
+        width: 100%;
+    }
+
+    #ladoIzquierdoTexto>img {
+        height: 150px;
+        width: 150px;
+        position: fixed;
+        top: 40%;
+    }
+
+    #ladoDerechoTexto>img {
+        height: 150px;
+        width: 150px;
+        position: fixed;
+        top: 40%;
+
+    }
+
+    form h4 {
+        font-size: 32px;
+        text-align: center;
+
+    }
+}
+
+
+
+/* #iconos-redes {
+    height: 40px;
+    font-size: 34px;
+    background-color: black;
+    color: #b7b7b8;
+    text-align: center;
+
+    padding: 5px;
+
+
+}
+
+#iconos-redes>a {
+    padding: 25px;
+} */
+
+#errorCBox {
+    display: none;
+    color: white;
+    background-color: red;
+}
+
+
+/* ELIMINAR UNA VEZ QUE SE HAYA CONFIGURADO LAS COLUMNAS DE LA TABLA */
+/* table,
+tr,
+td,
+th {
+    border: solid;
+    /* width: 400px; */
+/* table-layout: auto; 
+} */
+/*
+.celdaGenero {
+    
+
+    justify-content: center;
+    align-items: center
+} */
+
+.material-symbols-rounded {
+    color: rgb(255, 0, 0);
+    text-shadow: 2px 2px 3px black;
+}
